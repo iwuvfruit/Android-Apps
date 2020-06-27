@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+
+<!--//we will use linear layout because it's good for orienting things horizontally or vertically-->
+<!--match_parent: we want to takeup all the space-->
+<!--orientation: horizontal: text=============timestamp. both are horizontal-->
+<!--wrap_content: we don't want to occupy entire view so wrap the content-->
+<!--weightsum:breaking the layout in percentages-->
+<!--dp is unit defining width, height-->
+<!--layout weight: how much space i want to occupy-->
+<!--with size we deal with sp-->
+<!--lines: I want to have one line, if title is longer than 1 line limit it will cut off-->
+<!--for color we reference from color file-->
+<!--view is basically nothing, it's like div-->
+<!--gravity: it's children will be all centered-->
+    <!--parent view-->
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:background="@color/lightYellow"
+    android:gravity="center_vertical">
+
+    <View 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/mediumYellow" />
+    <view
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4" /> <!--tiny gap-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="75"
+        android:id="@+id/note_title"
+        android:textSize="23sp"
+        android:lines="1"
+        android:text="This is  some title"
+        android:padding="1dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:id="@+id/note_timestamp"
+        android:textSize="20sp"
+        android:text="2020"
+        android:padding="1dp"
+        />
+
+
+</LinearLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
